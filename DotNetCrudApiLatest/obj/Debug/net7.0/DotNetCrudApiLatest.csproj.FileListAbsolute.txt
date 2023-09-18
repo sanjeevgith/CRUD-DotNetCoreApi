@@ -74,3 +74,4 @@ D:\DotNet\DotNetCrudApiLatest\DotNetCrudApiLatest\obj\Debug\net7.0\refint\DotNet
 D:\DotNet\DotNetCrudApiLatest\DotNetCrudApiLatest\obj\Debug\net7.0\DotNetCrudApiLatest.pdb
 D:\DotNet\DotNetCrudApiLatest\DotNetCrudApiLatest\obj\Debug\net7.0\DotNetCrudApiLatest.genruntimeconfig.cache
 D:\DotNet\DotNetCrudApiLatest\DotNetCrudApiLatest\obj\Debug\net7.0\ref\DotNetCrudApiLatest.dll
+D:\DotNet\DotNetCrudApiLatest\DotNetCrudApiLatest\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -25,6 +25,9 @@ namespace DotNetCrudApiLatest.Repository.Implementation
 
 
 
+
+
+
         public async Task<List<Student>> GetAllAsync()
         {
             return await dbContext.Students.ToListAsync();
@@ -41,6 +44,46 @@ namespace DotNetCrudApiLatest.Repository.Implementation
             }
 
             return studentToDelete;
+        }
+
+        public async Task<Student> GetEmpById(Guid id)
+        {
+            var getStudent = await dbContext.Students.FirstOrDefaultAsync(x => x.Id==id);
+
+           if (getStudent != null)
+            {
+                await dbContext.SaveChangesAsync();
+                return getStudent;
+            }  
+            return getStudent;
+        }
+
+
+        public async Task<Student> UpdateStdById(Guid id, Student student)
+        {
+            var existingStudent = await  dbContext.Students.FirstOrDefaultAsync(y => y.Id == id);
+            if (existingStudent != null)
+            {
+                existingStudent.Name = student.Name;
+                existingStudent.Phone = student.Phone;
+                existingStudent.Address = student.Address;
+                existingStudent.Email = student.Email;
+                existingStudent.Pincode = student.Pincode;
+
+                await dbContext.SaveChangesAsync();
+
+                return existingStudent;
+            }
+            return null;
+
+        }
+
+
+
+        public async Task<Student> Login(Login login)
+        {
+            var loginData = await dbContext.Students.FirstOrDefaultAsync(student => student.Name == login.Name && student.Email == login.Email);
+            return loginData;
         }
 
 

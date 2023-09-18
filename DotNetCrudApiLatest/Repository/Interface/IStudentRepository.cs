@@ -12,6 +12,16 @@ namespace DotNetCrudApiLatest.Repository.Interface
 
 
         Task<Student > DeleteById(Guid id);
-      
+
+
+        Task<Student> GetEmpById(Guid id);
+
+
+        Task<Student> UpdateStdById(Guid id, Student student);
+
+
+        Task<Student> Login(Login login);
+
+
     }
 }
